@@ -1,0 +1,39 @@
+{
+  "extends": "../../packages/typescript-config/base.json",
+  "compilerOptions": {
+    "module": "CommonJS",
+    "moduleResolution": "node",
+    "declaration": true,
+    "removeComments": true,
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "allowSyntheticDefaultImports": true,
+    "target": "ES2021",
+    "sourceMap": true,
+    "outDir": "./dist",
+    "baseUrl": ".",
+    "incremental": true,
+    "skipLibCheck": true,
+    "strictNullChecks": false,
+    "noImplicitAny": false,
+    "strictBindCallApply": false,
+    "forceConsistentCasingInFileNames": false,
+    "noFallthroughCasesInSwitch": false,
+    "esModuleInterop": true,
+    "types": ["node"],
+
+    "paths": {
+      "src/*": ["src/*"],
+      "@obtp/shared-types": ["../../packages/shared-types/src/index.ts"],
+      "@obtp/validation": ["../../packages/validation/src/index.ts"],
+      "@obtp/business-logic": ["../../packages/business-logic/src/index.ts"]
+    }
+  },
+  "include": [
+    "src/**/*",
+    "../../packages/shared-types/src/**/*",
+    "../../packages/validation/src/**/*",
+    "../../packages/business-logic/src/**/*"
+  ],
+  "exclude": ["node_modules", "dist", "**/*.spec.ts"]
+}
